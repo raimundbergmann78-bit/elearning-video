@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BFW E-Learning – Erklärvideo</title>
+<style>
+  :root { --bg: #0b1320; --neon: #00e5ff; --pink: #ff2d95; --text: #e8f6ff; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+    font: 16px/1.5 "Segoe UI", system-ui, sans-serif;
+    background-image:
+      radial-gradient(60vw 40vh at 12% -10%, rgba(0,229,255,.14), transparent 60%),
+      radial-gradient(55vw 45vh at 92% 8%, rgba(139,92,246,.14), transparent 60%);
+    display: flex; flex-direction: column; align-items: center;
+    padding: clamp(16px, 4vw, 48px);
+  }
+  h1 { font-size: clamp(22px, 3vw, 34px); margin: 0 0 6px; text-shadow: 0 0 18px rgba(0,229,255,.35); }
+  .unter { color: #9fb6c9; margin: 0 0 28px; text-align: center; }
+  .videos { display: grid; gap: clamp(20px, 3vw, 36px); width: min(1100px, 100%); }
+  .karte {
+    background: #101b2b; border: 1.5px solid rgba(0,229,255,.35); border-radius: 16px;
+    overflow: hidden; box-shadow: 0 0 18px rgba(0,229,255,.18), 0 14px 34px rgba(0,0,0,.35);
+  }
+  .karte header { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+  .karte h2 { font-size: 18px; margin: 0; flex: 1; }
+  .marke {
+    font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    color: #06222c; background: var(--neon); border-radius: 999px; padding: 3px 10px;
+  }
+  .karte.de .marke { background: var(--pink); color: #2a0011; }
+  video { display: block; width: 100%; background: #000; }
+  .fuss { display: flex; gap: 10px; flex-wrap: wrap; padding: 0 16px 14px; }
+  .fuss a {
+    color: var(--neon); text-decoration: none; font-weight: 600; font-size: 14px;
+    border: 1px solid rgba(0,229,255,.45); border-radius: 10px; padding: 6px 12px;
+  }
+  .fuss a:hover { background: rgba(0,229,255,.12); }
+  footer { margin-top: 34px; color: #7d93a6; font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+  <h1>BFW E-Learning – Erklärvideo</h1>
+  <p class="unter">Rundgang durch die Plattform: Bereiche, Lehrerfarben, Dokumente, Quiz, Klausur und Verwaltung.</p>
+
+  <div class="videos">
+    <section class="karte en">
+      <header><span class="marke">English</span><h2>Platform Walkthrough</h2></header>
+      <video controls preload="metadata" playsinline src="BFW-E-Learning-Erklaerung-EN.mp4"></video>
+      <div class="fuss"><a href="BFW-E-Learning-Erklaerung-EN.mp4" download>Video herunterladen (MP4)</a></div>
+    </section>
+
+    <section class="karte de">
+      <header><span class="marke">Deutsch</span><h2>Die Plattform im Überblick</h2></header>
+      <video controls preload="metadata" playsinline src="BFW-E-Learning-Erklaerung-DE.mp4"></video>
+      <div class="fuss"><a href="BFW-E-Learning-Erklaerung-DE.mp4" download>Video herunterladen (MP4)</a></div>
+    </section>
+  </div>
+
+  <footer>BFW Nürnberg · Basisausbildung · E-Learning-Plattform</footer>
+</body>
+</html>
